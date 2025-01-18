@@ -1,0 +1,145 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.display {
+    background: rgb(238,174,202);
+    background: linear-gradient(131deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    display:grid;
+    grid-template-rows: 90px 300px 110px;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-areas:
+    "a a a"
+    "b b b"
+    "c d e";
+    border-radius: 20px;
+}
+
+.searchbar {
+    grid-area: a;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.searchbar input {
+    height: 33px;
+    width: 240px;
+    border-radius: 99px;
+    color: purple;
+    padding-left: 20px;
+}
+
+.searchbar svg {
+    height: 32px;
+    color: blueviolet;
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* .searchbar input:focus{
+    width: 340px;
+} */
+
+.searchbar svg:hover {
+    padding: 4px;
+    border: solid;
+}
+
+.temperature {
+    grid-area: b;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.temperature img {
+    height: 140px;
+    transform: translateY(-15%);
+}
+
+#temp {
+    transform: translateY(-55%);
+    color: rgb(129, 48, 129);
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#city {
+    transform: translateY(-80%);
+    color: rgb(129, 48, 129);
+    font-size: 19px;
+    font-weight: bolder;
+}
+
+.wind {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 25px;
+}
+
+.wind img {
+    height: 60px;
+}
+
+#p {
+    color: rgb(129, 48, 129);
+    font-size: 11px;
+    font-weight: 550;
+}
+
+.aqi {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 25px;
+}
+
+.aqi img {
+    height: 60px;
+}
+
+#d {
+    color: rgb(129, 48, 129);
+    font-weight: 900;
+}
+
+.humidity {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 25px;
+}
+
+.humidity img {
+    height: 60px;
+}
+
+.temperature {
+    display: none;
+}
+.aqi {
+    display: none;
+}
+.humidity {
+    display: none;
+}
+.wind {
+    display: none;
+}
